@@ -1,0 +1,778 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+<meta name="theme-color" content="#1255b7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="mobile-web-app-capable" content="yes">
+
+<title>Nafasi ya Kazi - Dereva Toyota IST</title>
+
+<style>
+:root{
+  --primary:#1255b7;
+  --primary-dark:#103f99;
+  --background:#f4f7fc;
+  --text:#172b49;
+  --muted:#64748b;
+  --green:#17aa61;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  width:100%;
+  min-height:100%;
+  margin:0;
+  padding:0;
+  overflow-x:clip;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+
+body{
+  width:100%;
+  min-width:0;
+  min-height:100vh;
+  min-height:100dvh;
+  margin:0;
+  padding:0;
+  background:var(--background);
+  color:var(--text);
+  font-family:system-ui,-apple-system,
+  "Segoe UI",Roboto,Arial,sans-serif;
+  overflow-x:clip;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+.app{
+  width:100%;
+  max-width:none;
+  min-width:0;
+  min-height:100vh;
+  min-height:100dvh;
+  margin:0;
+  padding:0 0 env(safe-area-inset-bottom);
+  background:var(--background);
+  overflow-x:clip;
+}
+
+/* HEADER */
+.hero{
+  width:100%;
+  padding:
+    calc(22px + env(safe-area-inset-top))
+    20px 27px;
+  background:linear-gradient(
+    145deg,
+    #1764cc,
+    #103f99
+  );
+  color:#fff;
+  border-radius:0 0 28px 28px;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.2px;
+}
+
+.logo{
+  display:grid;
+  place-items:center;
+  width:40px;
+  height:40px;
+  flex-shrink:0;
+  border-radius:13px;
+  background:#ffffff25;
+  font-size:23px;
+}
+
+.tag{
+  display:inline-block;
+  max-width:100%;
+  margin-top:27px;
+  padding:8px 12px;
+  border-radius:30px;
+  background:#ffffff24;
+  font-size:11px;
+  font-weight:700;
+}
+
+h1{
+  margin:15px 0 11px;
+  font-size:clamp(24px,7vw,31px);
+  line-height:1.2;
+  letter-spacing:-.6px;
+  overflow-wrap:break-word;
+}
+
+.hero p{
+  margin:0;
+  color:#e1ecff;
+  font-size:14px;
+  line-height:1.65;
+}
+
+/* CAR IMAGE - GITHUB */
+.car{
+  width:100%;
+  min-width:0;
+  margin-top:20px;
+  padding:12px;
+  background:#ffffff15;
+  border:1px solid #ffffff2a;
+  border-radius:19px;
+  text-align:center;
+}
+
+.car img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:220px;
+  object-fit:contain;
+  border-radius:12px;
+}
+
+.car span{
+  display:block;
+  margin-top:9px;
+  color:#e3edff;
+  font-size:12px;
+}
+
+/* MAIN CONTENT */
+.content{
+  width:100%;
+  min-width:0;
+  padding:16px;
+}
+
+/* SALARY AND DEADLINE */
+.stats{
+  display:grid;
+  grid-template-columns:
+    minmax(0,1fr) minmax(0,1fr);
+  gap:10px;
+  margin-bottom:15px;
+}
+
+.stat,
+.card{
+  min-width:0;
+  background:#fff;
+  border:1px solid #e9eff7;
+  border-radius:19px;
+  box-shadow:0 5px 20px #183c6b08;
+}
+
+.stat{
+  padding:15px 11px;
+  overflow-wrap:anywhere;
+}
+
+.stat .emoji{
+  font-size:23px;
+}
+
+.small{
+  margin:9px 0 6px;
+  color:#74849b;
+  font-size:10px;
+  line-height:1.5;
+  font-weight:650;
+}
+
+.stat strong{
+  display:block;
+  color:#1558b6;
+  font-size:clamp(14px,4vw,19px);
+  line-height:1.35;
+  font-variant-numeric:tabular-nums;
+}
+
+/* CARDS */
+.card{
+  width:100%;
+  padding:18px;
+  margin-bottom:15px;
+}
+
+h2{
+  margin:0 0 17px;
+  font-size:17px;
+  line-height:1.4;
+  letter-spacing:-.2px;
+}
+
+/* WORK SCHEDULE */
+.schedule{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  min-width:0;
+}
+
+.schedule > div:last-child{
+  flex:1;
+  min-width:0;
+}
+
+.ico{
+  display:grid;
+  place-items:center;
+  width:43px;
+  height:43px;
+  flex-shrink:0;
+  background:#eaf2ff;
+  border-radius:13px;
+  font-size:22px;
+}
+
+.schedule strong{
+  display:block;
+  color:#1657ae;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.schedule p{
+  margin:5px 0 0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.65;
+}
+
+.line{
+  height:1px;
+  margin:17px 0;
+  background:#edf1f7;
+}
+
+/* REQUIREMENTS */
+.requirement{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  padding:11px 0;
+  font-size:13px;
+  line-height:1.55;
+}
+
+.requirement .desc{
+  flex:1;
+  min-width:0;
+  overflow-wrap:break-word;
+}
+
+.check{
+  display:grid;
+  place-items:center;
+  width:23px;
+  height:23px;
+  flex-shrink:0;
+  background:#e4f8eb;
+  color:#159454;
+  border-radius:50%;
+  font-weight:900;
+}
+
+.pill{
+  flex-shrink:0;
+  margin-left:auto;
+  padding:5px 7px;
+  background:#e7f8ed;
+  color:#0f8a4b;
+  border-radius:6px;
+  font-size:10px;
+  font-weight:700;
+}
+
+.license-note{
+  margin:12px 0 0;
+  color:#718096;
+  font-size:12px;
+  line-height:1.7;
+}
+
+/* DOCUMENTS */
+.docs{
+  padding:15px;
+  background:#f2f7ff;
+  border-radius:13px;
+  color:#405573;
+  font-size:13px;
+  line-height:1.85;
+  overflow-wrap:break-word;
+}
+
+.docs b{
+  color:#153e79;
+}
+
+.doc-item{
+  margin-bottom:12px;
+}
+
+.doc-item:last-child{
+  margin-bottom:0;
+}
+
+.notice{
+  margin-top:14px;
+  padding:13px;
+  background:#fff7e7;
+  color:#8b5b12;
+  border-radius:12px;
+  font-size:12px;
+  line-height:1.7;
+}
+
+/* APPLICATION */
+.apply-description{
+  margin:0;
+  color:#63748c;
+  font-size:13px;
+  line-height:1.85;
+}
+
+.deadline{
+  margin:16px 0 0;
+  color:#1756a8;
+  font-size:13px;
+  font-weight:700;
+  line-height:1.6;
+}
+
+.whatsapp{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  width:100%;
+  min-height:54px;
+  margin-top:18px;
+  padding:15px 12px;
+  background:var(--green);
+  color:#fff;
+  border:0;
+  border-radius:15px;
+  box-shadow:0 7px 15px #17aa612a;
+  text-decoration:none;
+  text-align:center;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.5;
+  touch-action:manipulation;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.whatsapp:active{
+  transform:scale(.99);
+}
+
+.whatsapp.disabled{
+  background:#8997a9;
+  box-shadow:none;
+  cursor:default;
+}
+
+.phone{
+  margin:13px 0 0;
+  color:#697d99;
+  text-align:center;
+  font-size:12px;
+}
+
+footer{
+  padding:9px 15px 20px;
+  color:#9aa8b9;
+  text-align:center;
+  font-size:11px;
+  line-height:1.6;
+}
+
+/* SMALL PHONES */
+@media(max-width:360px){
+  .hero{
+    padding-left:16px;
+    padding-right:16px;
+  }
+
+  .content{
+    padding:12px;
+  }
+
+  .card{
+    padding:15px;
+  }
+
+  .stats{
+    gap:8px;
+  }
+
+  .stat{
+    padding:13px 9px;
+  }
+
+  .stat strong{
+    font-size:14px;
+  }
+
+  .requirement{
+    gap:8px;
+    font-size:12px;
+  }
+
+  .pill{
+    font-size:9px;
+    padding:4px 6px;
+  }
+}
+
+/* LARGE PHONES */
+@media(min-width:430px){
+  .hero{
+    padding-left:24px;
+    padding-right:24px;
+  }
+
+  .content{
+    padding:20px;
+  }
+
+  .card{
+    padding:21px;
+  }
+}
+
+/* ACCESSIBILITY */
+@media(prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{
+    scroll-behavior:auto!important;
+    animation:none!important;
+    transition:none!important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<header class="hero">
+
+  <div class="nav">
+    <div class="logo">🚘</div>
+    <span>DRIVER RECRUITMENT</span>
+  </div>
+
+  <div class="tag">
+    ● NAFASI YA KAZI • 2026
+  </div>
+
+  <h1>
+    Tunatafuta Dereva Mwenye Uzoefu
+  </h1>
+
+  <p>
+    Nafasi ya kazi ya udereva wa gari aina ya
+    Toyota IST kwa ajili ya kuwapeleka na
+    kuwarudisha watoto shuleni.
+  </p>
+
+  <!-- PICHA MPYA KUTOKA GITHUB -->
+  <div class="car">
+
+    <img
+      src="https://raw.githubusercontent.com/jjshirimatz/udereva/main/images-5.jpeg"
+      alt="Toyota IST"
+      fetchpriority="high"
+      decoding="async"
+    >
+
+    <span>
+      Gari la kazi: Toyota IST
+    </span>
+
+  </div>
+
+</header>
+
+<main class="content">
+
+  <!-- SALARY / DEADLINE -->
+  <div class="stats">
+
+    <div class="stat">
+      <div class="emoji">💰</div>
+      <div class="small">
+        MSHAHARA KWA MWEZI
+      </div>
+      <strong>TSh 450,000</strong>
+    </div>
+
+    <div class="stat">
+      <div class="emoji">📅</div>
+      <div class="small">
+        MWISHO WA MAOMBI
+      </div>
+      <strong>20 Oct 2026</strong>
+    </div>
+
+  </div>
+
+  <!-- RATIBA -->
+  <section class="card">
+
+    <h2>🕒 Ratiba ya Kazi</h2>
+
+    <div class="schedule">
+
+      <div class="ico">🌅</div>
+
+      <div>
+        <strong>
+          Saa 12:00 Asubuhi (06:00)
+        </strong>
+
+        <p>
+          Kuchukua watoto nyumbani na
+          kuwapeleka shuleni kwa usalama.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="line"></div>
+
+    <div class="schedule">
+
+      <div class="ico">☀️</div>
+
+      <div>
+        <strong>
+          Saa 9:30 Alasiri (15:30)
+        </strong>
+
+        <p>
+          Kuwachukua watoto shuleni na
+          kuwarudisha nyumbani kwa usalama.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SIFA -->
+  <section class="card">
+
+    <h2>✅ Sifa za Mwombaji</h2>
+
+    <div class="requirement">
+      <span class="check">✓</span>
+      <span class="desc">
+        Awe raia wa Tanzania
+      </span>
+    </div>
+
+    <div class="requirement">
+      <span class="check">✓</span>
+      <span class="desc">
+        Umri wa miaka 18 na kuendelea
+      </span>
+    </div>
+
+    <div class="requirement">
+      <span class="check">✓</span>
+      <span class="desc">
+        Awe na uzoefu wa udereva
+      </span>
+    </div>
+
+    <div class="requirement">
+      <span class="check">✓</span>
+      <span class="desc">
+        Kitambulisho cha NIDA
+      </span>
+      <span class="pill">LAZIMA</span>
+    </div>
+
+    <div class="requirement">
+      <span class="check">✓</span>
+      <span class="desc">
+        Leseni ya udereva
+      </span>
+      <span class="pill">LAZIMA</span>
+    </div>
+
+    <div class="requirement">
+      <span class="check">✓</span>
+      <span class="desc">
+        Cheti cha TIN (TIN Certificate)
+      </span>
+      <span class="pill">LAZIMA</span>
+    </div>
+
+    <p class="license-note">
+      Leseni inaweza kuwa ya daraja lolote
+      kwa ajili ya kutuma maombi, lakini
+      mwombaji atapaswa kuwa na daraja
+      linaloruhusu kuendesha gari husika
+      kisheria.
+    </p>
+
+  </section>
+
+  <!-- NYARAKA -->
+  <section class="card">
+
+    <h2>📄 Nyaraka za Kutuma</h2>
+
+    <div class="docs">
+
+      <div class="doc-item">
+        <b>1.</b>
+        Picha ya leseni ya udereva
+        (mbele na nyuma).
+        Kona zote nne za kitambulisho
+        zionekane.
+      </div>
+
+      <div class="doc-item">
+        <b>2.</b>
+        Picha ya kitambulisho cha taifa
+        NIDA (mbele na nyuma).
+        Kona zote nne za kitambulisho
+        zionekane.
+      </div>
+
+      <div class="doc-item">
+        <b>3.</b>
+        Picha ya cheti cha TIN
+        (TIN Certificate).
+      </div>
+
+    </div>
+
+    <div class="notice">
+      📸 Hakikisha picha zote zinaonekana
+      vizuri, maandishi yanasomeka na
+      hakuna sehemu iliyokatika.
+    </div>
+
+  </section>
+
+  <!-- APPLICATION -->
+  <section class="card">
+
+    <h2>📲 Tuma Maombi Yako</h2>
+
+    <p class="apply-description">
+      Ikiwa una sifa zote zilizotajwa,
+      bonyeza kitufe hapa chini kuwasiliana
+      nasi kupitia WhatsApp na kutuma
+      nyaraka zako.
+
+      <br><br>
+
+      Tutumie picha za kitambulisho
+      chako cha NIDA, picha za
+      leseni yako ya udereva pamoja
+      na cheti chako cha TIN
+      (TIN Certificate) ili tuhakiki
+      taarifa zako.
+    </p>
+
+    <p class="deadline">
+      Mwisho wa kutuma maombi:
+      20 Oktoba 2026
+    </p>
+
+    <a
+      class="whatsapp"
+      id="apply"
+      href="https://wa.me/255666505604?text=Habari%2C%20nahitaji%20kuomba%20kazi%20ya%20udereva%20wa%20Toyota%20IST."
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      💬 TUMA MAOMBI WHATSAPP
+    </a>
+
+    <div class="phone">
+      WhatsApp: 0666 505 604
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Driver Recruitment
+  • Nafasi ya Udereva
+</footer>
+
+</div>
+
+<script>
+"use strict";
+
+// Deadline: 20 October 2026, Tanzania time
+const deadline = new Date(
+  "2026-10-21T00:00:00+03:00"
+);
+
+const apply = document.getElementById("apply");
+
+function checkDeadline(){
+
+  if(Date.now() >= deadline.getTime()){
+
+    apply.removeAttribute("href");
+
+    apply.classList.add("disabled");
+
+    apply.setAttribute("aria-disabled","true");
+
+    apply.textContent =
+      "MUDA WA MAOMBI UMEKWISHA";
+
+  }
+
+}
+
+checkDeadline();
+
+document.addEventListener(
+  "visibilitychange",
+  checkDeadline
+);
+
+</script>
+
+</body>
+</html>
